@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practica Formularios</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
@@ -12,24 +12,26 @@
     </header>
     <main>
         <h2>Registro de Club</h2>
-        <form action="#" method="post" name="registro-club" class="registro">
+        <form action="#" method="post" name="registro-club" class="registro" id="registro-club">
             <fieldset>
                 <legend>Datos Personales</legend>
                 <!-- Campo nombre -->
                 <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required autofocus tabindex="1">
+                <!-- <input type="text" id="name" name="name" required autofocus tabindex="1"> -->
+                <input type="text" id="name" name="name" autofocus tabindex="1">
             <!-- Campo apellido -->
                 <label for="apellido">apellido:</label>
                 <input type="text" id="apellido" name="apellido" required tabindex="2">
             <!-- Campo edad -->
                 <label for="edad">edad:</label>
-                <input type="number" id="edad" name="edad" min="18" max="100" required tabindex="3">
+                <!--<input type="number" id="edad" name="edad" min="18" max="100" required tabindex="3"> -->
+                <input type="number" id="edad" name="edad" required tabindex="3">
             <!-- Campo Genero -->
                 <label for="genero">Genero:</label>
                 <input type="radio" id="masculino" name="genero" value="masculino" required tabindex="4">
                 <label for="masculino" class="genero">Masculino</label>
                 <input type="radio" id="feminino" name="genero" value="feminino" required tabindex="5">
-                <label for="masculino" class="genero">feminino</label>
+                <label for="feminino" class="genero">feminino</label>
                 <input type="radio" id="otro" name="genero" value="otro" required tabindex="6">
                 <label for="otro" class="genero">Otro</label>
             <!-- Campo Afirmacion -->    
@@ -53,7 +55,7 @@
                 <button type="reset" tabindex="12">Borrar</button>
         </form>        
         <h2>Registro de perdida</h2>
-        <form action="#" method="post" name="registro-perdida" class="perdida">
+        <form action="#" method="post" name="registro-perdida" class="perdida" id="registro-perdida">
             <fieldset>
                 <legend>Datos de la Pérdida</legend>
             <!-- Campo de Fecha -->
@@ -61,7 +63,8 @@
                 <input type="date" id="fecha" name="fecha" required tabindex="1">
             <!-- Campo de Hora -->
                 <label for="hora">Hora de Pérdida:</label>
-                <input type="time" id="hora" name="hora" required tabindex="2">
+                <!-- <input type="time" id="hora" name="hora" required tabindex="2"> -->
+                <input type="time" id="hora" name="hora" tabindex="2">
             <!-- Campo de color -->
                 <label for="color">Color del objeto:</label>
                 <input type="color" id="color" name="color" required tabindex="3">
@@ -90,7 +93,7 @@
                     </optgroup>
                 </select>
             <!-- Campo multiple -->
-                <label for="Accesorios">Accesorios:</label>
+                <label for="accesorios">Accesorios:</label>
                 <select id="Accesorios" name="Accesorios" multiple tabindex="6">
                     <option value="Ruedines">Ruedines</option>
                     <option value="Hinchadores">Hinchadores</option>
@@ -123,8 +126,8 @@
                     <option value="cervélo">
                     <option value="argon">
                 </datalist>
-                <label for="lugar">Marca de la bicileta:</label>
-                <input type="text" list="marcas" id="lugar" name="lugar" required tabindex="7">
+                <label for="marca">Marca de la bicileta:</label>
+                <input type="text" list="marcas" id="marca" name="marca" required tabindex="7">
             </fieldset>
             <!-- Campo enviar y borrar -->
                 <input type="submit" value="Enviar" tabindex="8">
@@ -134,5 +137,6 @@
     <footer>
         <p>&copy; 2025 Practica Formularios</p>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
