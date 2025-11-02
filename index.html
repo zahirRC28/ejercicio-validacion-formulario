@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica Formularios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Practica Formularios</h1>
+    </header>
+    <main>
+        <h2>Registro de Club</h2>
+        <form action="#" method="post" name="registro-club" class="registro">
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <!-- Campo nombre -->
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required autofocus tabindex="1">
+            <!-- Campo apellido -->
+                <label for="apellido">apellido:</label>
+                <input type="text" id="apellido" name="apellido" required tabindex="2">
+            <!-- Campo edad -->
+                <label for="edad">edad:</label>
+                <input type="number" id="edad" name="edad" min="18" max="100" required tabindex="3">
+            <!-- Campo Genero -->
+                <label for="genero">Genero:</label>
+                <input type="radio" id="masculino" name="genero" value="masculino" required tabindex="4">
+                <label for="masculino" class="genero">Masculino</label>
+                <input type="radio" id="feminino" name="genero" value="feminino" required tabindex="5">
+                <label for="masculino" class="genero">feminino</label>
+                <input type="radio" id="otro" name="genero" value="otro" required tabindex="6">
+                <label for="otro" class="genero">Otro</label>
+            <!-- Campo Afirmacion -->    
+                <label for="suscribir">Me siento del Club:</label>
+                <input type="checkbox" id="Afirmacion" name="Afirmacion" value="sí" tabindex="7">
+            <!-- info sobre ti --> 
+                <label for="info">Cuéntanos sobre ti:</label>
+                <textarea id="informacion" name="informacion" rows="5" cols="30" placeholder="Escribe aqui" tabindex="8"></textarea>  
+            </fieldset>
+            <fieldset>
+                <legend>Datos de Contacto</legend>
+            <!-- Campo de correo-->
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" required tabindex="9" placeholder="example@example.com">
+            <!-- Campo de telefono-->    
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required tabindex="10" placeholder="+34 123 456 789">
+            </fieldset>             
+            <!-- Campo enviar y borrar -->
+                <input type="submit" value="Enviar" tabindex="11">
+                <button type="reset" tabindex="12">Borrar</button>
+        </form>        
+        <h2>Registro de perdida</h2>
+        <form action="#" method="post" name="registro-perdida" class="perdida">
+            <fieldset>
+                <legend>Datos de la Pérdida</legend>
+            <!-- Campo de Fecha -->
+                <label for="fecha">Fecha de Pérdida:</label>
+                <input type="date" id="fecha" name="fecha" required tabindex="1">
+            <!-- Campo de Hora -->
+                <label for="hora">Hora de Pérdida:</label>
+                <input type="time" id="hora" name="hora" required tabindex="2">
+            <!-- Campo de color -->
+                <label for="color">Color del objeto:</label>
+                <input type="color" id="color" name="color" required tabindex="3">
+            <!-- Campo de rango -->
+                <label for="rango">Precio de la pérdida:</label>
+                <input type="range" id="precio" name="precio"  min="100" max="10000" tabindex="4">
+                <p>Rango de precio 100 - 10 000</p>
+            <!-- Campo de tipo -->
+                <label for="tipo">Tipo de bicileta:</label>
+                <select id="tipo" name="tipo" required tabindex="5">
+                    <option value="" selected disabled hidden>--Seleccionar--</option>
+                    <optgroup label="Urbana">
+                      <option value="urbana-clasica">Bicicleta Clásica</option>
+                      <option value="urbana-plegable">Bicicleta Plegable</option>
+                      <option value="urbana-commuter">Bicicleta Commuter</option>
+                    </optgroup>
+                    <optgroup label="Montaña">
+                      <option value="mtb-sport">Bicicletas de tipo Sport</option>
+                      <option value="mtb-trail">Bicicletas de tipo Trail o Hard Tail</option>
+                      <option value="mtb-xc">Bicicletas para XC o Cross Country</option>
+                    </optgroup>
+                    <optgroup label="Carrera">
+                      <option value="carrera-gran-fondo">Bicicletas Gran Fondo</option>
+                      <option value="carrera-racing">Bicicletas Racing</option>
+                      <option value="carrera-aero">Bicicletas Aero</option>
+                    </optgroup>
+                </select>
+            <!-- Campo multiple -->
+                <label for="Accesorios">Accesorios:</label>
+                <select id="Accesorios" name="Accesorios" multiple tabindex="6">
+                    <option value="Ruedines">Ruedines</option>
+                    <option value="Hinchadores">Hinchadores</option>
+                    <option value="Rodillos">Rodillos</option>
+                    <option value="Bomba de aire">Bomba de aire</option>
+                    <option value="Alforja">Alforja</option>
+                    <option value="Silla portabebés">Silla portabebés</option>
+                </select>
+            <!-- Campo datas -->
+                <datalist id="marcas">
+                    <option value="specialized">
+                    <option value="trek">
+                    <option value="merida">
+                    <option value="scott">
+                    <option value="giant">
+                    <option value="cube">
+                    <option value="lapierre">
+                    <option value="orbea">
+                    <option value="cannondale">
+                    <option value="bmc">
+                    <option value="canyon">
+                    <option value="look">
+                    <option value="protek">
+                    <option value="megamo">
+                    <option value="pinarello">
+                    <option value="bianchi">
+                    <option value="bh">
+                    <option value="factor">
+                    <option value="ghost">
+                    <option value="cervélo">
+                    <option value="argon">
+                </datalist>
+                <label for="lugar">Marca de la bicileta:</label>
+                <input type="text" list="marcas" id="lugar" name="lugar" required tabindex="7">
+            </fieldset>
+            <!-- Campo enviar y borrar -->
+                <input type="submit" value="Enviar" tabindex="8">
+                <button type="reset" tabindex="12">Borrar</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 Practica Formularios</p>
+    </footer>
+</body>
+</html>
